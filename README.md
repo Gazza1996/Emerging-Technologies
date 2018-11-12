@@ -25,10 +25,10 @@ Python must be installed on your machine in order to run any of theae files. You
 
 Once Python is installed you must run the following command in the cmd prompt
 
-'pip install jupyter'
+>pip install jupyter
 
 You can clone down this repo following this and once you have you can navigate to the folder directory and run the following command
 
-'jupyter notebook'
+>jupyter notebook
 
 It will load for a few seconds and a tab in chrome should open up and have the folder appear and you will be able to run all the files in the directory.
