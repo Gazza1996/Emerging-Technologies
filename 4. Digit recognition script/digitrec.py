@@ -3,6 +3,7 @@ import gzip
 # In shell, run pip install image..
 from PIL import Image #image library
 import numpy as np 
+import matplotlib.pyplot as plt
 
 # Reference
 # https://docs.python.org/3/library/gzip.html
@@ -65,7 +66,7 @@ train_images = read_images("train-images-idx3-ubyte.gz")
 test_images = read_images("t10k-images-idx3-ubyte.gz")
 
 # Download the image and label files. 
-img = Image.fromarray(np.array(train_images[4999]).astype('uint8')) # Have Python decompress and read them byte by byte into appropriate data structures in memory.
+img = Image.fromarray(np.array(train_images[750]).astype(np.uint8)) # Have Python decompress and read them byte by byte into appropriate data structures in memory.
 img = img.convert('RGB') 
-img.show() # display image
-img.save('train-img.png') # save image as png
+img.show()
+img.save('train-750-7.png') # save image as png
