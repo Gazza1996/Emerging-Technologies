@@ -4,8 +4,9 @@ import gzip
 from PIL import Image #image library
 import numpy as np 
 
-# Download the image and label files. 
-# Have Python decompress and read them byte by byte into appropriate data structures in memory.
+# Reference
+# https://docs.python.org/3/library/gzip.html
+# https://www.youtube.com/watch?v=oYndcjlzwX8
 
 # function to read label files. Adapted from notebook 3.
 def read_labels(filename):
@@ -62,3 +63,9 @@ print() #line break
 # Call the functions and run them to read the files
 train_images = read_images("train-images-idx3-ubyte.gz")
 test_images = read_images("t10k-images-idx3-ubyte.gz")
+
+# Download the image and label files. 
+img = Image.fromarray(np.array(train_images[4999]).astype('uint8')) # Have Python decompress and read them byte by byte into appropriate data structures in memory.
+img = img.convert('RGB') 
+img.show() # display image
+img.save('train-img.png') # save image as png
