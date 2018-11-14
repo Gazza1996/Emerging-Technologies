@@ -1,17 +1,16 @@
 #import the following python libraries:
 import gzip
-# In shell, run pip install image..
 from PIL import Image #image library
 import numpy as np 
-import matplotlib.pyplot as plt
 
 # Reference
 # https://docs.python.org/3/library/gzip.html
 # https://www.youtube.com/watch?v=oYndcjlzwX8
 
+# Part one
 # function to read label files. Adapted from notebook 3.
 def read_labels(filename):
-    with gzip.open(filename,'rb') as f: # use gzip to open the file in read binary mode
+    with gzip.open(filename,'rb') as f: # use gzip to open the file
         magic = f.read(4) # magic number is the first 4 bytes
         magic = int.from_bytes(magic,'big') # Convert bytes to integers.
         print("Magic Number:", magic) # print to console
@@ -28,6 +27,7 @@ print() # line break
 train_labels = read_labels("train-labels-idx1-ubyte.gz")
 test_labels = read_labels("t10k-labels-idx1-ubyte.gz")
 
+# Part two
 # function to read image files. Adapted from notebook 3.
 def read_images(filename):
     with gzip.open(filename,'rb') as f:
@@ -61,10 +61,12 @@ def read_images(filename):
     # append Updates the list by adding an object to the list. append(): It is basically used in Python to add one element.
 print() #line break
 
+# Part three
 # Call the functions and run them to read the files
 train_images = read_images("train-images-idx3-ubyte.gz")
 test_images = read_images("t10k-images-idx3-ubyte.gz")
 
+# Part four
 # Download the image and label files. 
 img = Image.fromarray(np.array(train_images[750]).astype(np.uint8)) # Have Python decompress and read them byte by byte into appropriate data structures in memory.
 img = img.convert('RGB') 
