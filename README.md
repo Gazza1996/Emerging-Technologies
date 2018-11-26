@@ -18,6 +18,15 @@ A Python script that takes an image ﬁle containing a handwritten digit and ide
 ## 5. Digit recognition notebook
 A jupyter notebook explaining how the above Python script works and discussing its performance.
 
+## How to clone this repository
+1. Go to the clone or download button at the top right of this repository which is green.
+2. Copy the URL in here
+3. Open Git cmd prompt or a similar cmd prompt and cd to your preferred location and do a git clone in this location
+
+```bash
+ https://github.com/Gazza1996/Emerging-Technologies.git
+```
+
 ## How to run
 These are a mix between python and jupyter notebook.
 
