@@ -32,3 +32,10 @@ You can clone down this repo following this and once you have you can navigate t
 >jupyter notebook
 
 It will load for a few seconds and a tab in chrome should open up and have the folder appear and you will be able to run all the files in the directory.
+
+
+In order to run the python script in folder number 4 you must navigate to the folder from the cloned directory and perform the following command,
+
+>python digitrec.py
+
+It will run in the cmd prompt and will then display the image in a paint format and be saved in the folder directory as a PNG file.
