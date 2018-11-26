@@ -7,6 +7,8 @@ import numpy as np
 # https://docs.python.org/3/library/gzip.html
 # https://www.youtube.com/watch?v=oYndcjlzwX8
 
+# File is broken into 4 parts for notebook number 5 describing this file
+
 # Part one
 # function to read label files. Adapted from notebook 3.
 def read_labels(filename):
@@ -15,7 +17,7 @@ def read_labels(filename):
         magic = int.from_bytes(magic,'big') # Convert bytes to integers.
         print("Magic Number:", magic) # print to console
 
-        labelN = f.read(4) #label first 4 bytes
+        labelN = f.read(4) #label bytes
         labelN = int.from_bytes(labelN,'big') # Convert
         print("Labels:", labelN)
 
@@ -70,5 +72,5 @@ test_images = read_images("t10k-images-idx3-ubyte.gz")
 # Download the image and label files. 
 img = Image.fromarray(np.array(train_images[750]).astype(np.uint8)) # Have Python decompress and read them byte by byte into appropriate data structures in memory.
 img = img.convert('RGB') 
-img.show()
+img.show() # show image in paint or photo application
 img.save('train-750-7.png') # save image as png
