@@ -71,6 +71,6 @@ test_images = read_images("t10k-images-idx3-ubyte.gz")
 # Part four
 # Download the image and label files. 
 img = Image.fromarray(np.array(train_images[750]).astype(np.uint8)) # Have Python decompress and read them byte by byte into appropriate data structures in memory.
-img = img.convert('RGB') 
+img = img.convert('RGB') # returns a a converted copy of the image
 img.show() # show image in paint or photo application
 img.save('train-750-7.png') # save image as png
